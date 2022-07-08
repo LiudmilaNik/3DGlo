@@ -86,4 +86,4 @@ const hello = () => {
 };
 
 
-hello(); /*- в index.js'*/
+hello();
