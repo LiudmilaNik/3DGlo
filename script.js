@@ -85,8 +85,5 @@ const hello = () => {
   console.log(hello);
 };
 
-// export default hello
-
-// import hello from './modules/hello.js'  - в index.js';
 
 hello(); /*- в index.js'*/
