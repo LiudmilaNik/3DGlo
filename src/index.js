@@ -6,10 +6,12 @@ import modal from "./modules/modal";
 import calc from "./modules/calc";
 import valid from "./modules/valid";
 import tabs from "./modules/tabs";
+import slider from "./modules/slider";
 
-timer("15 juli 2022");
+timer("20 juli 2022");
 menu();
 modal();
 calc();
 valid();
 tabs();
+slider();
