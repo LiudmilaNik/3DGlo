@@ -25,15 +25,16 @@ const menu = () => {
   menu.addEventListener("click", (e) => {
     e.preventDefault();
     if (
-      // !e.target.closest("menu") ||
       e.target.matches(".close-btn") ||
       e.target.matches("ul>li>a")
+      // ||
+      // !e.target.closest("menu")
     ) {
       menu.classList.toggle("active-menu");
     }
-    // if (!e.target.closest("menu")) menu.classList.remove("active-menu");
-
-    console.log(e.target);
+    //     else if (!e.target.closest("menu")) {
+    //   menu.classList.remove("active-menu");
+    // }
   });
 };
 
