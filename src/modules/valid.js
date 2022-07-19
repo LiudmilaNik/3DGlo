@@ -1,7 +1,7 @@
 " use strict";
 
 const valid = () => {
-  const calcItem = document.querySelectorAll(".calc-item");
+  const calcItem = document.querySelectorAll("input.calc-item");
   const yourName = document.querySelectorAll('[placeholder="Ваше имя"]');
   const yourMessage = document.querySelectorAll(
     '[placeholder="Ваше сообщение"]'

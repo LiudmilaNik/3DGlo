@@ -28,12 +28,45 @@ const calc = (price = 100) => {
     }
 
     if (calcType.value && calcSquare.value) {
-      totalValue =
-        price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue;
+      totalValue = Math.round(
+        price * calcTypeValue * calcSquareValue * calcCountValue * calcDayValue
+      );
     } else {
       totalValue = 0;
     }
-    total.textContent = totalValue;
+    // total.textContent = totalValue;
+
+    const animate = ({ timing, draw, duration }, collbeck) => {
+      let start = performance.now();
+
+      requestAnimationFrame(function animate(time) {
+        // timeFraction изменяется от 0 до 1
+        let timeFraction = (time - start) / duration;
+        if (timeFraction > 1) timeFraction = 1;
+
+        // вычисление текущего состояния анимации
+        let progress = timing(timeFraction);
+
+        draw(progress); // отрисовать её
+
+        if (timeFraction < 1) {
+          requestAnimationFrame(animate);
+        }
+      });
+    };
+
+    const totalAnim = () => {
+      animate({
+        duration: 1000,
+        timing: (timeFraction) => {
+          return timeFraction;
+        },
+        draw: (progress) => {
+          total.textContent = Math.round(totalValue * progress);
+        },
+      });
+    };
+    totalAnim(totalValue);
   };
 
   calcBlock.addEventListener("input", (e) => {
