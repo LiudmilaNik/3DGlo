@@ -1,4 +1,5 @@
 " use strict";
+import { animate } from "./helpers";
 
 const calc = (price = 100) => {
   const calcBlock = document.querySelector(".calc-block");
@@ -35,24 +36,6 @@ const calc = (price = 100) => {
       totalValue = 0;
     }
     // total.textContent = totalValue;
-
-    const animate = ({ timing, draw, duration }, collbeck) => {
-      let start = performance.now();
-
-      requestAnimationFrame(function animate(time) {
-        let timeFraction = (time - start) / duration;
-        if (timeFraction > 1) timeFraction = 1;
-
-       
-        let progress = timing(timeFraction);
-
-        draw(progress);
-
-        if (timeFraction < 1) {
-          requestAnimationFrame(animate);
-        }
-      });
-    };
 
     const totalAnim = () => {
       animate({

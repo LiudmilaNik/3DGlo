@@ -13,6 +13,7 @@ const menu = () => {
     //   menu.style.transform = ``;
     // }
     menu.classList.toggle("active-menu");
+    document.body.style.overflow = "hidden";
   };
 
   menuBtn.addEventListener("click", handleMenu);
@@ -26,13 +27,14 @@ const menu = () => {
     e.preventDefault();
     if (
       e.target.matches(".close-btn") ||
-      e.target.matches("ul>li>a")
-      // ||
-      // !e.target.closest("menu")
+      e.target.matches("ul>li>a") ||
+      !e.target.closest(".menu")
     ) {
       menu.classList.toggle("active-menu");
+      document.body.style.overflow = "";
     }
-    //     else if (!e.target.closest("menu")) {
+    // return;
+    // else if (!e.target.classList.contains("active-menu")) {
     //   menu.classList.remove("active-menu");
     // }
   });

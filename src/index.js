@@ -8,7 +8,7 @@ import tabs from "./modules/tabs";
 import slider from "./modules/slider";
 import calc from "./modules/calc";
 
-timer("20 juli 2022");
+timer("25 juli 2022");
 menu();
 modal();
 valid();
