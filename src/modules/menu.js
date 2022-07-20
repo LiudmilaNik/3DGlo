@@ -33,7 +33,6 @@ const menu = () => {
       menu.classList.toggle("active-menu");
       document.body.style.overflow = "";
     }
-    // return;
     // else if (!e.target.classList.contains("active-menu")) {
     //   menu.classList.remove("active-menu");
     // }
