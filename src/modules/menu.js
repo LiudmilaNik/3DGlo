@@ -5,7 +5,6 @@ const menu = () => {
   const menu = document.querySelector("menu");
   // const closeBtn = menu.querySelector(".close-btn");
   // const menuItems = menu.querySelectorAll("ul>li>a");
-
   const handleMenu = () => {
     // if (!menu.style.transform) {
     //   menu.style.transform = `translateX(0)`;
@@ -15,14 +14,11 @@ const menu = () => {
     menu.classList.toggle("active-menu");
     document.body.style.overflow = "hidden";
   };
-
   menuBtn.addEventListener("click", handleMenu);
   // closeBtn.addEventListener("click", handleMenu);
-
   // menuItems.forEach((menuItem) =>
   //   menuItem.addEventListener("click", handleMenu)
   // );
-
   menu.addEventListener("click", (e) => {
     e.preventDefault();
     if (
