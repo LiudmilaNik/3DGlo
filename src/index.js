@@ -9,7 +9,7 @@ import slider from "./modules/slider";
 import calc from "./modules/calc";
 import sendForm from "./modules/sendForm";
 
-timer("31 juli 2022");
+timer("02 august 2022");
 menu();
 modal();
 valid();
